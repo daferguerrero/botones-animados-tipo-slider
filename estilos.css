@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #d1d1d1;
+    display: flex;
+    justify-content: center;
+
+    /* 1vh = 1% del alto */
+    /* 1vw = 1% del ancho */
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    font-family: 'montserrat';
+    font-size: 40px;
+    color: #4080aa;
+    text-transform: uppercase;
+
+    position: absolute;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    margin: 10px;
+    padding: 10px 20px;
+    font-family: 'montserrat';
+    font-size: 20px;
+    color: #4080aa;
+    background: none;
+
+    position: relative;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.btn::before{
+    content: "";
+    background: #4080aa;
+    position: absolute;
+    transition: all 0.6s;
+    z-index: -1;
+}
+
+.btn1::before, .btn2::before{
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+
+/* Boton 1 */
+.btn1::before{
+    left: 0;
+}
+
+/* Boton 2 */
+.btn2::before{
+    right: 0;
+}
+
+.btn1:hover::before, .btn2:hover::before{
+    width: 100%;
+}
+
+.btn3::before, .btn4::before{
+    left: 0;
+    width: 100%;
+    height: 0;
+}
+
+/* Boton 3 */
+.btn3::before{
+    top: 0;
+}
+
+/* Boton 4 */
+.btn4::before{
+    bottom: 0;
+}
+
+.btn3:hover::before, .btn4:hover::before{
+    height: 100%;
+}
